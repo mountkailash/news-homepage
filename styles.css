@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: hsl(36, 100%, 99%);
+}
+.main-container {
+    max-width: 960px;
+    margin: 0 auto;
+    
+}
+/* Header section */
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: end;
+    height: 70px;
+}
+.logo .logo-img {
+    width: 50px;
+    height: 30px;
+}
+.navigation {
+    text-align: right;
+}
+.navigation .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    display: inline;
+    margin-left: 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+.menu li:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+.hamburger {
+    background: url(./images/icon-menu.svg) no-repeat center center;
+    background-size: contain;
+    width: 30px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: none;
+}
+.close {
+    background: url(./images/icon-menu-close.svg) no-repeat center center;
+    background-size: contain;
+    width: 30px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: none;
+}
+/* Main section */
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+}
+.item1  {
+    max-width: 620px;
+    height: 275px;
+    grid-column-end: span 2;
+}
+.web-img {
+    width: 100%;
+    height: 275px;
+}
+.mobile-img {
+    display: none;
+}
+.item2 {
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+    grid-row-end: span 2;
+    margin-left: 10px;
+}
+.item2 h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: hsl(35, 77%, 62%);
+    margin-top: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.card-heading h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(36, 100%, 99%);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.card-heading h3:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+.card-heading p {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 30px;
+    color: hsl(233, 8%, 79%);
+    cursor: pointer;
+}
+.card-heading hr {
+    border: 0.2px solid hsl(236, 13%, 42%);
+}
+.item2 .card-heading {
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.item3 {
+    height: 180px;
+    margin-top: 20px;
+}
+.item3 h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    text-align: left;
+    margin-top: 10px;
+}
+.item4 {
+    height: 180px;
+    margin-top: 20px;
+    
+}
+.card-button p {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 22px;
+    text-align: left;
+    margin-top: 10px;
+}
+.long-text {
+    margin-right: 20px;
+    color: hsl(236, 13%, 42%);
+}
+.read-button {
+    margin-top: 30px;
+    border: none;
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    width: 165px;
+    height: 44px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+.read-button:hover {
+    background-color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+
+.small-img {
+    width: 90px;
+    height: 120px;
+}
+.img-box {
+    display: flex;
+}
+.text-box {
+    margin-left: 15px;
+}
+.text-box h3 {
+    font-family: 'Inter', sans-serif;
+    color: hsl(233, 8%, 79%);
+    font-size: 30px;
+}
+.heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.heading-text {
+    margin-right: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: hsl(236, 13%, 42%);
+}
+.heading:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+.item7 {
+    margin-left: 10px;
+}
+.item5, .item6, .item7 {
+    margin-top: 60px;
+} 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+.name {
+    color: hsl(5, 85%, 63%);
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .logo {
+        margin-left: 20px;
+    }
+    .menu {
+        display: none;
+    }
+    .hamburger {
+        margin-right: 20px;
+        transform: translateY(-50%);
+        display: inline;
+    }
+    .close {
+        display: none;   /* hide the close button initially */
+    }
+    .show .hamburger {
+        display: none;   /* Hide the hamburger button when menu is open */
+    }
+    .show .close {
+        display: block;  /* Show the close button when menu is open */
+        margin-left: auto;
+        position: absolute;
+        left: 85%;
+        top: 30px;
+    }
+    .navigation.show {
+        display: block;
+        position: absolute;
+        top: 0; /* Position the menu below the header */
+        right: 0;
+        background-color: hsl(36, 100%, 99%);
+        padding: 10px;
+        height: 100%;
+        width: 60%;
+      }
+      .show li {
+        display: block;
+        margin-top: 20px;
+        text-align: left;
+        margin-left: 24px;
+      }
+      .show .menu {
+        display: block;
+        position: absolute;
+        top: 20%;
+        left: 0;
+      }
+      .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .item1 {
+        grid-row: 1;
+        margin-left: 20px;
+        margin-right: 20px;
+        .web-img {
+            display: none;
+        }
+        .mobile-img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+      }
+      .item3 {
+        grid-row: 2;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      
+      .item4 {
+        grid-row: 3;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .item2 {
+        grid-row: 4;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+      .item5 {
+        grid-row: 5;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+      .item6 {
+        grid-row: 6;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+      .item7 {
+        grid-row: 7;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+}
+
